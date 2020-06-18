@@ -29,6 +29,7 @@ import android.text.TextUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.lopei.util.EncryptionContacts;
 
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
@@ -45,6 +46,7 @@ public class ApplicationLoader extends Application {
     public static volatile NetworkInfo currentNetworkInfo;
     public static volatile boolean unableGetCurrentNetwork;
     public static volatile Handler applicationHandler;
+    public static volatile EncryptionContacts encryptionContacts;
 
     private static ConnectivityManager connectivityManager;
     private static volatile boolean applicationInited = false;
@@ -194,6 +196,8 @@ public class ApplicationLoader extends Application {
         applicationHandler = new Handler(applicationContext.getMainLooper());
 
         AndroidUtilities.runOnUIThread(ApplicationLoader::startPushService);
+
+        encryptionContacts = new EncryptionContacts(getSharedPreferences(EncryptionContacts.ENCRYPTION_CONTACTS_PREFS, MODE_PRIVATE));
     }
 
     public static void startPushService() {

@@ -177,6 +177,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     private AvatarDrawable avatarDrawable;
     private ActionBarMenuItem animatingItem;
     private ActionBarMenuItem callItem;
+    private ActionBarMenuItem encryptItem;
     private ActionBarMenuItem editItem;
     private ActionBarMenuItem otherItem;
     protected float headerShadowAlpha = 1.0f;
@@ -249,6 +250,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
     private final static int edit_channel = 12;
     private final static int add_shortcut = 14;
     private final static int call_item = 15;
+    private final static int encrypt_item = 16;
     private final static int search_members = 17;
     private final static int add_member = 18;
     private final static int statistics = 19;
@@ -1324,6 +1326,13 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                     if (user != null) {
                         VoIPHelper.startCall(user, getParentActivity(), userInfo);
                     }
+                } else if (id == encrypt_item) {
+                    boolean encrypt = ApplicationLoader.encryptionContacts.isEncryptPeer(getEncryptionPeerId());
+
+                    ApplicationLoader.encryptionContacts.setEncryptPeer(getEncryptionPeerId(), !encrypt);
+                    Toast.makeText(getParentActivity(), "Encryption " + (!encrypt ? "On" : "Off"), Toast.LENGTH_SHORT).show();
+
+                    encryptItem.setIcon(ApplicationLoader.encryptionContacts.isEncryptPeer(getEncryptionPeerId()) ? R.drawable.lock_close : R.drawable.lock_open);
                 } else if (id == search_members) {
                     Bundle args = new Bundle();
                     args.putInt("chat_id", chat_id);
@@ -1408,6 +1417,7 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                 callItem.setVisibility(expanded || !callItemVisible ? GONE : INVISIBLE);
                 editItem.setVisibility(expanded || !editItemVisible ? GONE : INVISIBLE);
                 otherItem.setVisibility(expanded ? GONE : INVISIBLE);
+                encryptItem.setVisibility(channelInfoRow > 0 ? GONE : VISIBLE);
             }
 
             @Override
@@ -1418,6 +1428,8 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         sharedMediaLayout.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.MATCH_PARENT));
 
         ActionBarMenu menu = actionBar.createMenu();
+        encryptItem = menu.addItem(encrypt_item, R.drawable.lock_close);
+        encryptItem.setIcon(ApplicationLoader.encryptionContacts.isEncryptPeer(getEncryptionPeerId()) ? R.drawable.lock_close : R.drawable.lock_open);
         callItem = menu.addItem(call_item, R.drawable.ic_call);
         editItem = menu.addItem(edit_channel, R.drawable.group_edit_profile);
         otherItem = menu.addItem(10, R.drawable.ic_ab_other);
@@ -4916,5 +4928,9 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
         arrayList.add(new ThemeDescription(nameTextView[1], 0, null, null, new Drawable[]{verifiedDrawable}, null, Theme.key_profile_verifiedBackground));
 
         return arrayList;
+    }
+
+    private long getEncryptionPeerId() {
+        return channelInfoRow > 0 ? -1 : chat_id == 0 ? user_id : chat_id;
     }
 }

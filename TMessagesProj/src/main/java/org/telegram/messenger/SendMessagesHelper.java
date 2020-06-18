@@ -2378,10 +2378,12 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
     }
 
     private void sendMessage(String message, String caption, TLRPC.MessageMedia location, TLRPC.TL_photo photo, VideoEditedInfo videoEditedInfo, TLRPC.User user, TLRPC.TL_document document, TLRPC.TL_game game, TLRPC.TL_messageMediaPoll poll, long peer, String path, MessageObject reply_to_msg, TLRPC.WebPage webPage, boolean searchLinks, MessageObject retryMessageObject, ArrayList<TLRPC.MessageEntity> entities, TLRPC.ReplyMarkup replyMarkup, HashMap<String, String> params, boolean notify, int scheduleDate, int ttl, Object parentObject) {
-        try {
-            message = new EncryptionUtil().encrypt(message);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (!TextUtils.isEmpty(message) && (ApplicationLoader.encryptionContacts.isEncryptPeer(peer) || ApplicationLoader.encryptionContacts.isEncryptPeer(-peer))) {
+            try {
+                message = new EncryptionUtil().encrypt(message);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         if (user != null && user.phone == null) {
