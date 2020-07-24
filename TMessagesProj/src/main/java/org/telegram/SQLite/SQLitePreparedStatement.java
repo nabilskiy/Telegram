@@ -10,8 +10,8 @@ package org.telegram.SQLite;
 
 import android.os.SystemClock;
 
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
+import org.telegram.ormessenger.BuildVars;
+import org.telegram.ormessenger.FileLog;
 import org.telegram.tgnet.NativeByteBuffer;
 
 import java.nio.ByteBuffer;

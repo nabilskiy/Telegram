@@ -6,11 +6,11 @@ import android.content.Context;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.FileLoader;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.MessageObject;
+import org.telegram.ormessenger.R;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 

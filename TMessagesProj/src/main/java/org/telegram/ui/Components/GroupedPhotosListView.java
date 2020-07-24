@@ -8,11 +8,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Scroller;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MessageObject;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLoader;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.ImageReceiver;
+import org.telegram.ormessenger.MessageObject;
 import org.telegram.tgnet.TLRPC;
 
 import java.util.ArrayList;

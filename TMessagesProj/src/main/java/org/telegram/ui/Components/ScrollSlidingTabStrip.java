@@ -34,11 +34,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLoader;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.MessageObject;
+import org.telegram.ormessenger.R;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

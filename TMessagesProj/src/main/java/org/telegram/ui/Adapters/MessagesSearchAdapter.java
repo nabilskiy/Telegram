@@ -12,9 +12,9 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.MediaDataController;
+import org.telegram.ormessenger.MessageObject;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.ui.Cells.DialogCell;
 import org.telegram.ui.Cells.LoadingCell;
 import org.telegram.ui.Components.RecyclerListView;

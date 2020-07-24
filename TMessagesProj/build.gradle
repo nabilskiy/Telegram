@@ -290,7 +290,7 @@ android {
 
     def tgVoipDexFileName = "libtgvoip.dex"
     def tgVoipDexClasses = ["AudioRecordJNI", "AudioTrackJNI", "NativeTgVoipDelegate", "NativeTgVoipInstance", "TgVoipNativeLoader", "Resampler", "VLog"]
-    def tgVoipDexClassesPath = "org/telegram/messenger/voip"
+    def tgVoipDexClassesPath = "org/telegram/ormessenger/voip"
     def dxUtilPath = "${sdkDirectory.path}/build-tools/${buildToolsVersion}/dx"
 
     applicationVariants.all { variant ->

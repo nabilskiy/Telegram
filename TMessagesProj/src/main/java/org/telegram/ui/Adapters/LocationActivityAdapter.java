@@ -18,11 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
 
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.LocationController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.LocationController;
+import org.telegram.ormessenger.MessageObject;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Cells.EmptyCell;

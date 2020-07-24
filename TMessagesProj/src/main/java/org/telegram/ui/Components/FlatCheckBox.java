@@ -10,7 +10,7 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 
 public class FlatCheckBox extends View {

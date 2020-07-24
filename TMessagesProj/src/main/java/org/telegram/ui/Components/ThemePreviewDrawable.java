@@ -12,11 +12,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.Bitmaps;
-import org.telegram.messenger.DocumentObject;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ApplicationLoader;
+import org.telegram.ormessenger.Bitmaps;
+import org.telegram.ormessenger.DocumentObject;
+import org.telegram.ormessenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.io.File;

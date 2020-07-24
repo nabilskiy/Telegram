@@ -19,12 +19,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.Emoji;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.MediaDataController;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

@@ -7,7 +7,7 @@ import android.graphics.Path;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 
 public class VideoForwardDrawable extends Drawable {
 

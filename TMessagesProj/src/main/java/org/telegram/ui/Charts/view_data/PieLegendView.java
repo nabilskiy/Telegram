@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;

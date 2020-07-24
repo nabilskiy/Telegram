@@ -18,12 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ChatObject;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.MediaDataController;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.Utilities;
 import org.telegram.tgnet.SerializedData;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.ActionBar;

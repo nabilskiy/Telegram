@@ -45,7 +45,7 @@ struct ImplDataAndroid{
 };
 
 #ifndef TGVOIP_PACKAGE_PATH
-#define TGVOIP_PACKAGE_PATH "org/telegram/messenger/voip"
+#define TGVOIP_PACKAGE_PATH "org/telegram/ormessenger/voip"
 #endif
 
 #ifndef TGVOIP_PEER_TAG_VARIABLE_NAME

@@ -13,8 +13,8 @@ import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.SharedConfig;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.SharedConfig;
 import org.telegram.ui.ActionBar.Theme;
 
 public class URLSpanMono extends MetricAffectingSpan {

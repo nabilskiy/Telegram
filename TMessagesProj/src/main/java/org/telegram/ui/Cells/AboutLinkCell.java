@@ -25,12 +25,12 @@ import android.view.MotionEvent;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.browser.Browser;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.Emoji;
+import org.telegram.ormessenger.FileLog;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.MessageObject;
+import org.telegram.ormessenger.browser.Browser;
 import org.telegram.ui.Components.LayoutHelper;
 import org.telegram.ui.Components.LinkPath;
 import org.telegram.ui.ActionBar.Theme;

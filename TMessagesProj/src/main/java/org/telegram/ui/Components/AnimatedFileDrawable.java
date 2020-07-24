@@ -25,11 +25,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.AnimatedFileDrawableStream;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.AnimatedFileDrawableStream;
+import org.telegram.ormessenger.DispatchQueue;
+import org.telegram.ormessenger.FileLoader;
+import org.telegram.ormessenger.FileLog;
 import org.telegram.tgnet.TLRPC;
 
 import java.io.File;

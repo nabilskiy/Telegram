@@ -24,13 +24,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserObject;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ContactsController;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.ImageReceiver;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.UserObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

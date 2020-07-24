@@ -34,10 +34,10 @@ import android.widget.ImageView;
 
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ApplicationLoader;
+import org.telegram.ormessenger.FileLog;
+import org.telegram.ormessenger.R;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.PhotoViewer;
 

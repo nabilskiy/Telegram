@@ -21,8 +21,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ApplicationLoader;
 import org.telegram.ui.ActionBar.Theme;
 
 public class PullForegroundDrawable {

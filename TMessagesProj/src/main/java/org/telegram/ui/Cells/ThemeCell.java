@@ -22,11 +22,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLog;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.Utilities;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.LayoutHelper;
 

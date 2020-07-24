@@ -17,11 +17,11 @@ import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.NotificationsController;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ContactsController;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.NotificationsController;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.Components.AvatarDrawable;

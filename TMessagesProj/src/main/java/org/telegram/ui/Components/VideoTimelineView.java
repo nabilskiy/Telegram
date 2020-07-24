@@ -28,9 +28,9 @@ import android.view.View;
 
 import androidx.core.content.ContextCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLog;
+import org.telegram.ormessenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;

@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.view.animation.DecelerateInterpolator;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.Theme;
 
 public class MediaActionDrawable extends Drawable {

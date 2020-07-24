@@ -13,7 +13,7 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.WindowManager;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 import org.telegram.ui.ActionBar.AdjustPanFrameLayout;
 
 public class SizeNotifierFrameLayoutPhoto extends AdjustPanFrameLayout {

@@ -20,9 +20,9 @@ import android.graphics.Shader;
 import androidx.annotation.Keep;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageReceiver;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLog;
+import org.telegram.ormessenger.ImageReceiver;
 
 public class ClippingImageView extends View {
 

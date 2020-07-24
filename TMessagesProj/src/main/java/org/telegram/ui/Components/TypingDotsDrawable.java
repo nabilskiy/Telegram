@@ -13,9 +13,9 @@ import android.graphics.ColorFilter;
 import android.graphics.PixelFormat;
 import android.view.animation.DecelerateInterpolator;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.NotificationCenter;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.ui.ActionBar.Theme;
 
 public class TypingDotsDrawable extends StatusDrawable {

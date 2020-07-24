@@ -18,12 +18,12 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.MessagesController;
+import org.telegram.ormessenger.R;
+import org.telegram.ormessenger.UserConfig;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.SimpleTextView;
 import org.telegram.ui.ActionBar.Theme;

@@ -698,7 +698,7 @@ jint Java_org_telegram_ui_Components_AnimatedFileDrawable_getVideoFrame(JNIEnv *
 }
 
 jint videoOnJNILoad(JavaVM *vm, JNIEnv *env) {
-    jclass_AnimatedFileDrawableStream = (jclass) env->NewGlobalRef(env->FindClass("org/telegram/messenger/AnimatedFileDrawableStream"));
+    jclass_AnimatedFileDrawableStream = (jclass) env->NewGlobalRef(env->FindClass("org/telegram/ormessenger/AnimatedFileDrawableStream"));
     if (jclass_AnimatedFileDrawableStream == 0) {
         return JNI_FALSE;
     }

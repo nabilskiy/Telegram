@@ -58,7 +58,7 @@ import android.widget.EdgeEffect;
 import android.widget.LinearLayout;
 import android.widget.OverScroller;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.IntDef;

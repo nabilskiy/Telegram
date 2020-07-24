@@ -3,14 +3,14 @@
 -keepclassmembernames class * {
     @com.google.android.gms.common.annotation.KeepName *;
 }
--keep class org.telegram.messenger.* { *; }
--keep class org.telegram.messenger.camera.* { *; }
--keep class org.telegram.messenger.secretmedia.* { *; }
--keep class org.telegram.messenger.support.* { *; }
--keep class org.telegram.messenger.support.* { *; }
--keep class org.telegram.messenger.time.* { *; }
--keep class org.telegram.messenger.video.* { *; }
--keep class org.telegram.messenger.voip.* { *; }
+-keep class org.telegram.ormessenger.* { *; }
+-keep class org.telegram.ormessenger.camera.* { *; }
+-keep class org.telegram.ormessenger.secretmedia.* { *; }
+-keep class org.telegram.ormessenger.support.* { *; }
+-keep class org.telegram.ormessenger.support.* { *; }
+-keep class org.telegram.ormessenger.time.* { *; }
+-keep class org.telegram.ormessenger.video.* { *; }
+-keep class org.telegram.ormessenger.voip.* { *; }
 -keep class org.telegram.SQLite.** { *; }
 -keep class org.telegram.tgnet.ConnectionsManager { *; }
 -keep class org.telegram.tgnet.NativeByteBuffer { *; }

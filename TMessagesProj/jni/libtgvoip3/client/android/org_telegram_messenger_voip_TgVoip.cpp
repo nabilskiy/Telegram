@@ -251,7 +251,7 @@ jint asJavaState(const TgVoipState &tgVoipState) {
 }
 
 jobject asJavaTrafficStats(JNIEnv *env, const TgVoipTrafficStats &trafficStats) {
-    jclass clazz = env->FindClass("org/telegram/messenger/voip/TgVoip$TrafficStats");
+    jclass clazz = env->FindClass("org/telegram/ormessenger/voip/TgVoip$TrafficStats");
     jmethodID initMethodId = env->GetMethodID(clazz, "<init>", "(JJJJ)V");
     return env->NewObject(clazz, initMethodId, trafficStats.bytesSentWifi, trafficStats.bytesReceivedWifi, trafficStats.bytesSentMobile, trafficStats.bytesReceivedMobile);
 }
@@ -261,8 +261,8 @@ jobject asJavaFinalState(JNIEnv *env, const TgVoipFinalState &tgVoipFinalState) 
     jstring debugLog = env->NewStringUTF(tgVoipFinalState.debugLog.c_str());
     jobject trafficStats = asJavaTrafficStats(env, tgVoipFinalState.trafficStats);
     auto isRatingSuggested = static_cast<jboolean>(tgVoipFinalState.isRatingSuggested);
-    jclass finalStateClass = env->FindClass("org/telegram/messenger/voip/TgVoip$FinalState");
-    jmethodID finalStateInitMethodId = env->GetMethodID(finalStateClass, "<init>", "([BLjava/lang/String;Lorg/telegram/messenger/voip/TgVoip$TrafficStats;Z)V");
+    jclass finalStateClass = env->FindClass("org/telegram/ormessenger/voip/TgVoip$FinalState");
+    jmethodID finalStateInitMethodId = env->GetMethodID(finalStateClass, "<init>", "([BLjava/lang/String;Lorg/telegram/ormessenger/voip/TgVoip$TrafficStats;Z)V");
     return env->NewObject(finalStateClass, finalStateInitMethodId, persistentState, debugLog, trafficStats, isRatingSuggested);
 }
 
@@ -270,7 +270,7 @@ extern "C" {
 
     #pragma mark - Static JNI Methods
 
-    JNIEXPORT jlong JNICALL Java_org_telegram_messenger_voip_NativeTgVoipDelegate_makeNativeInstance(JNIEnv *env, jobject obj, jobject instanceObj, jobject config, jstring persistentStateFilePath, jobjectArray endpoints, jobject proxy, jint networkType, jobject encryptionKey) {
+    JNIEXPORT jlong JNICALL Java_org_telegram_ormessenger_voip_NativeTgVoipDelegate_makeNativeInstance(JNIEnv *env, jobject obj, jobject instanceObj, jobject config, jstring persistentStateFilePath, jobjectArray endpoints, jobject proxy, jint networkType, jobject encryptionKey) {
         // reading persistent state
         TgVoipPersistentState tgVoipPersistentState;
         readTgVoipPersistentState(jni::JavaStringToStdString(env, persistentStateFilePath).c_str(), tgVoipPersistentState);
@@ -319,22 +319,22 @@ extern "C" {
     }
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipDelegate_setGlobalServerConfig(JNIEnv *env, jobject obj, jstring serverConfigJson) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipDelegate_setGlobalServerConfig(JNIEnv *env, jobject obj, jstring serverConfigJson) {
         TgVoip::setGlobalServerConfig(jni::JavaStringToStdString(env, serverConfigJson));
     }
 
     JNIEXPORT jint JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipDelegate_getConnectionMaxLayer(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipDelegate_getConnectionMaxLayer(JNIEnv *env, jobject obj) {
         return TgVoip::getConnectionMaxLayer();
     }
 
     JNIEXPORT jstring JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipDelegate_getVersion(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipDelegate_getVersion(JNIEnv *env, jobject obj) {
         return env->NewStringUTF(TgVoip::getVersion().c_str());
     }
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipDelegate_setBufferSize(JNIEnv *env, jobject obj, jint size) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipDelegate_setBufferSize(JNIEnv *env, jobject obj, jint size) {
         tgvoip::audio::AudioOutputOpenSLES::nativeBufferSize = (unsigned int) size;
         tgvoip::audio::AudioInputOpenSLES::nativeBufferSize = (unsigned int) size;
     }
@@ -342,52 +342,52 @@ extern "C" {
     #pragma mark - Virtual JNI Methods
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_setNetworkType(JNIEnv *env, jobject obj, jint networkType) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_setNetworkType(JNIEnv *env, jobject obj, jint networkType) {
         getTgVoip(env, obj)->setNetworkType(parseTgVoipNetworkType(networkType));
     }
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_setMuteMicrophone(JNIEnv *env, jobject obj, jboolean muteMicrophone) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_setMuteMicrophone(JNIEnv *env, jobject obj, jboolean muteMicrophone) {
         getTgVoip(env, obj)->setMuteMicrophone(muteMicrophone);
     }
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_setAudioOutputGainControlEnabled(JNIEnv *env, jobject obj, jboolean enabled) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_setAudioOutputGainControlEnabled(JNIEnv *env, jobject obj, jboolean enabled) {
         getTgVoip(env, obj)->setAudioOutputGainControlEnabled(enabled);
     }
 
     JNIEXPORT void JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_setEchoCancellationStrength(JNIEnv *env, jobject obj, jint strength) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_setEchoCancellationStrength(JNIEnv *env, jobject obj, jint strength) {
         getTgVoip(env, obj)->setEchoCancellationStrength(strength);
     }
 
     JNIEXPORT jstring JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_getLastError(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_getLastError(JNIEnv *env, jobject obj) {
         return env->NewStringUTF(getTgVoip(env, obj)->getLastError().c_str());
     }
 
     JNIEXPORT jstring JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_getDebugInfo(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_getDebugInfo(JNIEnv *env, jobject obj) {
         return env->NewStringUTF(getTgVoip(env, obj)->getDebugInfo().c_str());
     }
 
     JNIEXPORT jlong JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_getPreferredRelayId(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_getPreferredRelayId(JNIEnv *env, jobject obj) {
         return getTgVoip(env, obj)->getPreferredRelayId();
     }
 
     JNIEXPORT jobject JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_getTrafficStats(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_getTrafficStats(JNIEnv *env, jobject obj) {
         return asJavaTrafficStats(env, getTgVoip(env, obj)->getTrafficStats());
     }
 
     JNIEXPORT jbyteArray JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_getPersistentState(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_getPersistentState(JNIEnv *env, jobject obj) {
         return copyVectorToJavaByteArray(env, getTgVoip(env, obj)->getPersistentState().value);
     }
 
     JNIEXPORT jobject JNICALL
-    Java_org_telegram_messenger_voip_NativeTgVoipInstance_stop(JNIEnv *env, jobject obj) {
+    Java_org_telegram_ormessenger_voip_NativeTgVoipInstance_stop(JNIEnv *env, jobject obj) {
         InstanceHolder *instance = getInstanceHolder(env, obj);
         TgVoipFinalState tgVoipFinalState = instance->nativeInstance->stop();
 

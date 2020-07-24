@@ -10,7 +10,7 @@ package org.telegram.tgnet;
 
 import android.text.TextUtils;
 
-import org.telegram.messenger.Utilities;
+import org.telegram.ormessenger.Utilities;
 
 import java.util.ArrayList;
 import java.util.HashMap;

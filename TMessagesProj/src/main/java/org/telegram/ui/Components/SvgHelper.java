@@ -30,7 +30,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-import org.telegram.messenger.FileLog;
+import org.telegram.ormessenger.FileLog;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;

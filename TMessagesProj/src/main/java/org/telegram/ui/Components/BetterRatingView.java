@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.R;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.R;
 import org.telegram.ui.ActionBar.Theme;
 
 /**

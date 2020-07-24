@@ -14,10 +14,10 @@ import android.graphics.Paint;
 import android.text.style.ReplacementSpan;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.FileLoader;
+import org.telegram.ormessenger.ImageLocation;
+import org.telegram.ormessenger.ImageReceiver;
 import org.telegram.tgnet.TLRPC;
 
 import java.util.Locale;

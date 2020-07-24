@@ -12,7 +12,7 @@ import android.graphics.*;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 
 import androidx.annotation.Keep;
 

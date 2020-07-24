@@ -11,7 +11,7 @@ import android.os.Build;
 import android.text.TextPaint;
 import android.view.HapticFeedbackConstants;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 import org.telegram.ui.Charts.data.ChartData;
 import org.telegram.ui.Charts.data.StackLinearChartData;
 import org.telegram.ui.Charts.view_data.ChartHorizontalLinesData;

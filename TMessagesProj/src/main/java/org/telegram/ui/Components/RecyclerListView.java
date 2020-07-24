@@ -36,9 +36,9 @@ import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.FileLog;
+import org.telegram.ormessenger.AndroidUtilities;
+import org.telegram.ormessenger.LocaleController;
+import org.telegram.ormessenger.FileLog;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.lang.reflect.Field;

@@ -13,7 +13,7 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.text.StaticLayout;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.ormessenger.AndroidUtilities;
 
 public class LinkPath extends Path {
 
